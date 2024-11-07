@@ -13,7 +13,7 @@ const ResultsList = ({ query, page }) => {
       setLoading(true);
       try {
         const data = await getNews(query || 'react', page, sortBy); // Default to "react" if no query
-        setResults(data);
+        setResults(data.hits);
       } catch (error) {
         console.error("Error fetching news:", error);
         setResults([]); // Set an empty array to prevent any rendering issues

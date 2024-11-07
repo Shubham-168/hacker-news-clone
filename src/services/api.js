@@ -12,8 +12,8 @@ export const getNews = async (query, page, sortBy) => {
         hitsPerPage: 10,
       },
     });
-    console.log("API Response:", response.data.hits); // Log the API response
-    return response.data.hits;
+    console.log("API Response:", response.data); // Log the API response
+    return response.data;
   } catch (error) {
     console.error("Error fetching news:", error);
     return []; // Return an empty array on error
